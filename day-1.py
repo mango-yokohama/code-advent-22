@@ -22,9 +22,17 @@ def process(in_file, out_file):
 			csvwriter.writerow([elfcounter,temptotal])
 			elfcounter += 1
 			if temptotal > currentmax:
+				thirdmax = secondmax
+				secondmax = currentmax
 				currentmax = temptotal
+			elif temptotal > secondmax:
+				thirdmax = secondmax
+				secondmax = temptotal
+			elif temptotal > thirdmax:
+				thirdmax = temptotal
 			temptotal = 0
-	print('(Total was: '+str(currentmax)+')')
+	print(f'Highest individual total was: '+str(currentmax))
+	print(f'Sum of the top three was: '+str(currentmax+secondmax+thirdmax))
 	fo.close()
 	fi.close()
 
