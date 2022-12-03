@@ -1,7 +1,6 @@
 
 import sys
 import argparse
-from collections import Counter
 
 def process(in_file):
 	fi = open(in_file,'r')
