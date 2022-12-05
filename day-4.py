@@ -55,7 +55,7 @@ def processtwo(in_file):
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='Run as an example client')
 
-	# run command: python3 day-3.py -i day3_data.txt
+	# run command: python3 day-4.py -i day4_data.txt
 	parser.add_argument('-i','--input',type=str)
 	args = parser.parse_args()
 	process(args.input)
